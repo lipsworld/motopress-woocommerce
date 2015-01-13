@@ -14,6 +14,10 @@ Extend MotoPress Content Editor plugin with WooCommerce shortcodes.
 
 This plugin integrates WooCommerce shortcodes with the MotoPress Content Editor plugin
 
+== Screenshots ==
+
+1. screenshot-1.png
+
 == Changelog ==
 
 = 1.0 =

@@ -33,7 +33,8 @@ function motopress_woocommerce_product_post_class( $classes, $class = '', $post_
 
 function motopress_woocommerce_mp_library_action($motopressCELibrary) {
 
-    $wooIcon = ltrim( (str_replace( content_url(), '' , plugin_dir_url( __FILE__ ) ) . 'woocommerce-logo.png'), '/');
+    $widdgetIcon = ltrim( (str_replace( content_url(), '' , plugin_dir_url( __FILE__ ) ) . 'widget-icon.png'), '/');
+    $leftPanelIcon = ltrim( (str_replace( content_url(), '' , plugin_dir_url( __FILE__ ) ) . 'left-panel-icon.png'), '/');
 	
     $orderby = array(
         'type' => 'radio-buttons',
@@ -58,13 +59,13 @@ function motopress_woocommerce_mp_library_action($motopressCELibrary) {
         ),
     );
 
-    $mpCart = new MPCEObject('woocommerce_cart', _('Cart'), $wooIcon, array(), 0);
+    $mpCart = new MPCEObject('woocommerce_cart', _('Cart'), $widdgetIcon, array(), 0);
     
-    $mpCheckout = new MPCEObject('woocommerce_checkout', _('Checkout'), $wooIcon, array(), 0);
+    $mpCheckout = new MPCEObject('woocommerce_checkout', _('Checkout'), $widdgetIcon, array(), 0);
     
-    $mpOrderTrackingForm = new MPCEObject('woocommerce_order_tracking', _('Order Tracking Form'), $wooIcon, array(), 0);
+    $mpOrderTrackingForm = new MPCEObject('woocommerce_order_tracking', _('Order Tracking Form'), $widdgetIcon, array(), 0);
     
-    $mpWoocommerceMyAccount = new MPCEObject('woocommerce_my_account', _('My Account'), $wooIcon,
+    $mpWoocommerceMyAccount = new MPCEObject('woocommerce_my_account', _('My Account'), $widdgetIcon,
         array(
             'order_count' => array(
                 'type' => 'text',
@@ -76,7 +77,7 @@ function motopress_woocommerce_mp_library_action($motopressCELibrary) {
         0
 	);
     
-	$mpRecentProducts = new MPCEObject('recent_products', _('Recent Products'), $wooIcon,
+	$mpRecentProducts = new MPCEObject('recent_products', _('Recent Products'), $widdgetIcon,
         array(
             'per_page' => array(
                 'type' => 'text',
@@ -96,7 +97,7 @@ function motopress_woocommerce_mp_library_action($motopressCELibrary) {
         0
 	);
 
-    $mpFeaturedProducts = new MPCEObject('featured_products', _('Featured Products'), $wooIcon,
+    $mpFeaturedProducts = new MPCEObject('featured_products', _('Featured Products'), $widdgetIcon,
         array(
             'per_page' => array(
                 'type' => 'text',
@@ -116,7 +117,7 @@ function motopress_woocommerce_mp_library_action($motopressCELibrary) {
         0
 	);
     
-    $mpProduct = new MPCEObject('product', _('Product'), $wooIcon,
+    $mpProduct = new MPCEObject('product', _('Product'), $widdgetIcon,
         array(
             'id' => array(
                 'type' => 'text',
@@ -131,7 +132,7 @@ function motopress_woocommerce_mp_library_action($motopressCELibrary) {
         0
 	);
     
-    $mpProducts = new MPCEObject('products', _('Products'), $wooIcon,
+    $mpProducts = new MPCEObject('products', _('Products'), $widdgetIcon,
         array(
             'ids' => array(
                 'type' => 'text',
@@ -155,7 +156,7 @@ function motopress_woocommerce_mp_library_action($motopressCELibrary) {
         0
 	);
     
-    $mpAddToCart = new MPCEObject('add_to_cart', _('Add to cart'), $wooIcon,
+    $mpAddToCart = new MPCEObject('add_to_cart', _('Add to cart'), $widdgetIcon,
         array(
             'id' => array(
                 'type' => 'text',
@@ -180,7 +181,7 @@ function motopress_woocommerce_mp_library_action($motopressCELibrary) {
         0
 	);
     
-    $mpProductPage = new MPCEObject('product_page', _('Product page'), $wooIcon,
+    $mpProductPage = new MPCEObject('product_page', _('Product page'), $widdgetIcon,
         array(
             'id' => array(
                 'type' => 'text',
@@ -194,7 +195,7 @@ function motopress_woocommerce_mp_library_action($motopressCELibrary) {
         0
 	);
     
-    $mpProductCategory = new MPCEObject('product_category', _('Product category'), $wooIcon,
+    $mpProductCategory = new MPCEObject('product_category', _('Product category'), $widdgetIcon,
         array(
             'per_page' => array(
                 'type' => 'text',
@@ -220,7 +221,7 @@ function motopress_woocommerce_mp_library_action($motopressCELibrary) {
         0
 	);
     
-    $mpProductCategories = new MPCEObject('product_categories', _('Product Categories'), $wooIcon,
+    $mpProductCategories = new MPCEObject('product_categories', _('Product Categories'), $widdgetIcon,
         array(
             'number' => array(
                 'type' => 'text',
@@ -257,7 +258,7 @@ function motopress_woocommerce_mp_library_action($motopressCELibrary) {
         0
 	);
     
-    $mpSaleProducts = new MPCEObject('sale_products', _('Sale Products'), $wooIcon,
+    $mpSaleProducts = new MPCEObject('sale_products', _('Sale Products'), $widdgetIcon,
         array(
             'per_page' => array(
                 'type' => 'text',
@@ -277,7 +278,7 @@ function motopress_woocommerce_mp_library_action($motopressCELibrary) {
         0
 	);
     
-    $mpBestSellingProducts = new MPCEObject('best_selling_products', _('Best Selling Products'), $wooIcon,
+    $mpBestSellingProducts = new MPCEObject('best_selling_products', _('Best Selling Products'), $widdgetIcon,
         array(
             'per_page' => array(
                 'type' => 'text',
@@ -295,7 +296,7 @@ function motopress_woocommerce_mp_library_action($motopressCELibrary) {
         0
 	);
     
-    $mpTopRatedProducts = new MPCEObject('top_rated_products', _('Top Rated Products'), $wooIcon,
+    $mpTopRatedProducts = new MPCEObject('top_rated_products', _('Top Rated Products'), $widdgetIcon,
         array(
             'per_page' => array(
                 'type' => 'text',
@@ -315,7 +316,7 @@ function motopress_woocommerce_mp_library_action($motopressCELibrary) {
         0
 	);
     
-    $mpProductAttribute = new MPCEObject('product_attribute', _('Top Rated Products'), $wooIcon,
+    $mpProductAttribute = new MPCEObject('product_attribute', _('Top Rated Products'), $widdgetIcon,
         array(
             'per_page' => array(
                 'type' => 'text',
@@ -345,7 +346,7 @@ function motopress_woocommerce_mp_library_action($motopressCELibrary) {
         0
 	);
     
-    $mpRelatedProducts = new MPCEObject('related_products', _('Related Products'), $wooIcon,
+    $mpRelatedProducts = new MPCEObject('related_products', _('Related Products'), $widdgetIcon,
         array(
             'per_page' => array(
                 'type' => 'text',
@@ -367,7 +368,7 @@ function motopress_woocommerce_mp_library_action($motopressCELibrary) {
     $woocommerceGroup = new MPCEGroup();
     $woocommerceGroup->setId(MPCEShortcode::PREFIX . 'woocommerce');
     $woocommerceGroup->setName("WooCommerce");
-    $woocommerceGroup->setIcon($wooIcon);
+    $woocommerceGroup->setIcon($leftPanelIcon);
     $woocommerceGroup->setPosition(60);
     $woocommerceGroup->addObject(array($mpRecentProducts, $mpFeaturedProducts, $mpProduct,
         $mpProducts, $mpAddToCart, $mpProductPage, $mpProductCategory, $mpProductCategories,
